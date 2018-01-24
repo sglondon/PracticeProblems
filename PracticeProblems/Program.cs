@@ -71,86 +71,38 @@ namespace PracticeProblems
 
 
 
-            //Homework 1/18 concatenation and indexing
+            //Homework 1/23 create an array with 25 elements, the array contains girl's names
+            //populate the array with a For loop
+            //print to console every other element beginning with 0
+            
 
-
-            Console.WriteLine("What is your name?");
-            Console.WriteLine();
-            string name = Console.ReadLine();
-            Console.WriteLine();
-
-            // name is cooking muffins, how many more cups does she need displayed using concatenation
-            double item = 7;
-            double item1 = 2;
-            Console.WriteLine(name + " is cooking muffins. The recipe calls for 7 cups of sugar and she has added 2, how many more cups does she need? She needs " + (item - item1) + " cups.");
-            Console.WriteLine();
-            Console.WriteLine();
-
-            ////Mike and friends are splitting a bill displayed using an index
-
-            Console.WriteLine("What is your name?");
-            string name0 = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("What is your friend's name?");
-            string friend1 = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("What is your friend's name?");
-            string friend2 = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("What is your friend's name?");
-            string friend3 = Console.ReadLine();
-
+            string[] girlsName = new string[25];
+            for (int i = 0; i < girlsName.Length; i++)
+            {
+                Console.WriteLine("Enter a girl's name " + girlsName[i]);                
+                girlsName[i] = Console.ReadLine().ToUpper();
+                Console.WriteLine();
+                //   Console.WriteLine(i); checking the value of i                
+            }
             Console.WriteLine();
             Console.WriteLine();
 
-            item = 4;
-            item1 = 13;
-            double total = item * item1;
-
-            Console.WriteLine("{0}, {1}, {2} and {3} are splitting a bill. If each paid $13 how much was the total bill? It was ${4}.", name0, friend1, friend2, friend3, total);
-
+            Console.WriteLine("We now have an array of girl's name with " + girlsName.Length + " elements. We will display every other element starting at 1.");
             Console.WriteLine();
             Console.WriteLine();
 
-            //How many packs of diapers can you buy with $40? displayed with an index
-            int dollars = 40;
-            int pack = 8;
-            int diapers = dollars / pack;
-            Console.WriteLine("If diapers cost ${0} per pack and you have ${1}, how many packs can you buy? You can buy {2} packs of diapers.", dollars, pack, diapers);
+            
+            for (int i = 0; i < girlsName.Length; i++)
+            {              
+                if ((i % 2) != 0)
+                { Console.WriteLine(girlsName[i] + " element number, " + " " + i + ".");
+                    Console.WriteLine();
+                }
+            }
 
-            Console.WriteLine();
-            Console.WriteLine();
+            
+          
 
-            //How much is it worth to clean the attic displayed with an index
-
-            Console.WriteLine("What is your name?");
-            string newName = Console.ReadLine();
-            Console.WriteLine();
-            int worker = 29;
-            int earn = 41;
-            int earn1 = earn - worker;
-            Console.WriteLine("{3} had ${0}. After cleaning the attic he has ${1}, How much did he earn cleaning? {3} earned ${2}.", worker, earn, earn1, newName);
-
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-            //How many miles did Pranav run? displayed with an index
-
-            Console.WriteLine("What is your name?");
-            string runner = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("What is your friend's name?");
-            string runner1 = Console.ReadLine();
-            Console.WriteLine();
-            int jRan = 47;
-            int moreMiles = 30;
-            int pRan = jRan - moreMiles;
-            Console.WriteLine("{0} ran {3} more miles than {2}. {0} ran {1} miles. How many miles did {2} run? {2} ran {4} miles.", runner, jRan, runner1, moreMiles, pRan);
-
-            Console.WriteLine();
-            Console.WriteLine();
         }
-
     }
 }
