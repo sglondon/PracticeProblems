@@ -74,34 +74,71 @@ namespace PracticeProblems
             //Homework 1/23 create an array with 25 elements, the array contains girl's names
             //populate the array with a For loop
             //print to console every other element beginning with 0
-            
 
-            string[] girlsName = new string[25];
-            for (int i = 0; i < girlsName.Length; i++)
+
+            //string[] girlsName = new string[25];
+            //for (int i = 0; i < girlsName.Length; i++)
+            //{
+            //    Console.WriteLine("Enter a girl's name " + girlsName[i]);                
+            //    girlsName[i] = Console.ReadLine().ToUpper();
+            //    Console.WriteLine();
+            //    //   Console.WriteLine(i); checking the value of i                
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine();
+
+            //Console.WriteLine("We now have an array of girl's name with " + girlsName.Length + " elements. We will display every other element starting at 1.");
+            //Console.WriteLine();
+            //Console.WriteLine();
+
+
+            //for (int i = 0; i < girlsName.Length; i++)
+            //{              
+            //    if ((i % 2) != 0)
+            //    { Console.WriteLine(girlsName[i] + " element number, " + " " + i + ".");
+            //        Console.WriteLine();
+            //    }
+            //}
+
+            //class exercise with julie, kristin, divya & julian
+            //figure out how to do the following
+            //read 10 numbers from keyboard and find their sum and avg
+
+            // int[] myNumbers = new int[10];
+            // double sum = 0;
+            // double average = 0;
+            // for (int i = 0; i < myNumbers.Length; i++)
+            // {
+            //     Console.WriteLine("Please enter a number ");
+            //     myNumbers[i] = int.Parse(Console.ReadLine());
+
+
+            //}
+            // for (int i = 0; i < myNumbers.Length; i++)
+            // {
+            //     sum = sum + myNumbers[i];
+            // }
+
+            // Console.WriteLine("The sum is " + sum);
+            // average = sum / myNumbers.Length;
+            // Console.WriteLine("The average is " + average);
+
+
+
+            //using the debuger to step through the nested loop for practice
+
+
+            int size = 5;                   //Equals the max number of columns and rows
+            int i, k;                       //i equals columns and k = rows?
+            for (i = 0; i <= size; i++)
             {
-                Console.WriteLine("Enter a girl's name " + girlsName[i]);                
-                girlsName[i] = Console.ReadLine().ToUpper();
-                Console.WriteLine();
-                //   Console.WriteLine(i); checking the value of i                
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-
-            Console.WriteLine("We now have an array of girl's name with " + girlsName.Length + " elements. We will display every other element starting at 1.");
-            Console.WriteLine();
-            Console.WriteLine();
-
-            
-            for (int i = 0; i < girlsName.Length; i++)
-            {              
-                if ((i % 2) != 0)
-                { Console.WriteLine(girlsName[i] + " element number, " + " " + i + ".");
-                    Console.WriteLine();
+                for (k = 0; k < i; k++)
+                {
+                    Console.Write("*");
                 }
+                Console.WriteLine("");
             }
-
-            
-          
+            Console.ReadLine();
 
         }
     }
